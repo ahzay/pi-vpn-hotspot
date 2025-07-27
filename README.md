@@ -1,4 +1,4 @@
-# Pi Zero VPN Gateway
+# Pi VPN Hotspot
 
 Turn a Pi into a portable VPN router. Creates a WiFi hotspot that routes all traffic through WireGuard (for now).
 
