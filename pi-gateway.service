@@ -1,0 +1,17 @@
+[Unit]
+Description=Pi Zero VPN Gateway
+After=network.target wg-quick@wg0.service
+Wants=network.target
+Requires=wg-quick@wg0.service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3 /opt/pi-gateway/main.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
